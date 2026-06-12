@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Virtual Dice</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell" aria-label="Virtual dice roller">
+      <div class="tip-popover" role="status">
+        <span class="tap-dot" aria-hidden="true"></span>
+        Tap the dice to roll
+      </div>
+
+      <section class="stage" aria-label="3D dice area">
+        <button class="dice-button" id="dice-button" type="button" aria-label="Roll the dice">
+          <span class="surface-shadow" aria-hidden="true"></span>
+          <span class="dice" id="dice" aria-hidden="true">
+            <span class="face face-1"><span></span></span>
+            <span class="face face-2"><span></span><span></span></span>
+            <span class="face face-3"><span></span><span></span><span></span></span>
+            <span class="face face-4"><span></span><span></span><span></span><span></span></span>
+            <span class="face face-5"><span></span><span></span><span></span><span></span><span></span></span>
+            <span class="face face-6"><span></span><span></span><span></span><span></span><span></span><span></span></span>
+          </span>
+        </button>
+      </section>
+
+      <div class="result-panel" aria-live="polite" aria-atomic="true">
+        <span class="result-label">Result</span>
+        <strong id="result-value">-</strong>
+      </div>
+    </main>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
